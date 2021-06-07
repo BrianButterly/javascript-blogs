@@ -5,6 +5,13 @@ const secondsEl = document.getElementById("seconds");
 
 const newYears = "9 July 2021";
 
+function fun() {
+  $("#loader").addClass("hide-loader");
+}
+setTimeout(function () {
+  fun();
+}, 5000);
+
 function countdown() {
   const newYearsDate = new Date(newYears);
   const currentDate = new Date();

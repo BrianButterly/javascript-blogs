@@ -5,9 +5,9 @@
 }
 
 body {
-  background-image: url(https://images.unsplash.com/photo-1556775351-fe97561f7b42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+  background-image: url(https://images.unsplash.com/photo-1471079502516-250c19af6928?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1334&q=80);
   background-size: cover;
-  /* background-position: center center; */
+  /* background-position: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,11 +15,14 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 h1 {
   font-size: 4rem;
   margin-top: -20rem;
+  color: white;
 }
 
 .countdown-container {
@@ -27,6 +30,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .big-text {
@@ -42,4 +46,60 @@ h1 {
 
 .countdown-el span {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  .countdown-container {
+    grid-template-columns: 2fr;
+    color: white;
+  }
+
+  .big-text {
+    font-size: 4rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  body {
+    background-position: bottom;
+  }
+
+  .countdown-el span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+}
+
+.loader {
+  border: 16px solid white;
+  border-top: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide-loader {
+  display: none;
 }
